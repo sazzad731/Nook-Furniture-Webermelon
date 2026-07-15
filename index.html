@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nook</title>
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+        <a href="/" class="logo">
+            <img src="./assets/logo.png" alt="logo">
+        </a>
+        <div class="menu-bar">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line1"></div>
+        </div>
+        <div class="nav-icons">
+            <a href="#"><img src="/assets/icons/user.png" alt="User icon"></a>
+            <a href="#"><img src="/assets/icons/heart.png" alt="Heart icon"></a>
+            <a href="#"><img src="/assets/icons/cart.png" alt="Shopping cart"></a>
+        </div>
+    </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <h1>Make your environment minimalistic and futuristic</h1>
+            <p>Transform your closets into functional works of art with closet creations’ custom design solutions.</p>
+            <div class="hero-content">
+                <div class="hero-images container">
+                    <div class="hero-img-1">
+                        <img src="./assets/hero-img1.png" alt="Furniture image">
+                        <div class="hero-img-content">
+                            <p>Vintage Desk Accessories 2024</p>
+                            <img src="./assets/icons/play.png" alt="music play icon">
+                        </div>
+                    </div>
+                    <img class="floating-seal" src="./assets/hero-seal.png" alt="seal">
+                    <img class="hero-img-2" src="./assets/hero-img2.png" alt="Furniture image">
+                    <div class="hero-img-1">
+                        <img src="./assets/hero-img1.png" alt="Furniture image">
+                        <div class="hero-img-content">
+                            <p>Vintage Desk Accessories 2024</p>
+                            <img src="./assets/icons/play.png" alt="music play icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="ticker-container">
+                    <div class="ticker-track" id="tickerTrack">
+                        <div class="brand"><img src="./assets/icons/dark-star.png" alt="star icon">Woak Table</div>
+                        <div class="brand"><img src="./assets/icons/dark-star.png" alt="star icon">Organic Fabric</div>
+                        <div class="brand"><img src="./assets/icons/dark-star.png" alt="star icon">Vintage Metal</div>
+                        <div class="brand"><img src="./assets/icons/dark-star.png" alt="star icon">Modern Chair</div>
+                        <div class="brand"><img src="./assets/icons/dark-star.png" alt="star icon">Mapple Shelf</div>
+                        <div class="brand"><img src="./assets/icons/dark-star.png" alt="star icon">Mapple Shelf</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Slider main container -->
+        <section class="container">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <p>Sofa</p>
+                        <div class="overlay"></div>
+                        <img src="./assets/slider1.png" alt="slide furniture image">
+                    </div>
+                    <div class="swiper-slide">
+                        <p>Chairs</p>
+                        <div class="overlay"></div>
+                        <img src="./assets/slider2.png" alt="slide furniture image">
+                    </div>
+                    <div class="swiper-slide">
+                        <p>Accessories</p>
+                        <div class="overlay"></div>
+                        <img src="./assets/slider3.png" alt="slide furniture image">
+                    </div>
+                    <div class="swiper-slide">
+                        <p>Table</p>
+                        <div class="overlay"></div>
+                        <img src="./assets/slider1.png" alt="slide furniture image">
+                    </div>
+                    <div class="swiper-slide">
+                        <p>Accessories</p>
+                        <div class="overlay"></div>
+                        <img src="./assets/slider3.png" alt="slide furniture image">
+                    </div>
+                    <div class="swiper-slide">
+                        <p>Chairs</p>
+                        <div class="overlay"></div>
+                        <img src="./assets/slider2.png" alt="slide furniture image">
+                    </div>
+                </div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="custom-navigation-wrapper no-flex-center">
+                    <div class="swiper-button-prev"></div>
+                    <span class="scroll-text">Scroll</span>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- popular collection section -->
+         <section></section>
+    </main>
+
+    <script src="index.js" type="module"></script>
+</body>
+</html>
