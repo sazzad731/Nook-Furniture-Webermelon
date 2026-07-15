@@ -470,3 +470,83 @@ h1{
 .futura-col-2 > img{
     width: 100%;
 }
+
+
+
+.why-container{
+    background-color: #FAFAFA;
+    padding: 120px 0px
+}
+
+
+.why-container > .container > h2{
+    margin-bottom: 88px;
+}
+
+
+.why-us-card-group{
+    gap: 125px;
+}
+
+
+/* Why us section */
+.why-us-card > img {
+    margin-bottom: 40px;
+}
+
+
+.why-us-card > h3 {
+    margin-bottom: 14px;
+    font-weight: 400;
+    font-size: 24px;
+    color: #303635;
+}
+
+
+.why-us-card > p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #495050;
+}
+
+
+
+
+/* contact us section */
+
+.contact-container {
+    background-color: #00494A;
+    margin: 109px 0px 104px 0px;
+    padding: 70px 102px;
+}
+
+
+.contact-container > div h2{
+    font-weight: 400;
+    font-size: 72px;
+    color: #F4F5F5;
+}
+
+
+.lets-work1{
+    position: relative;
+}
+
+
+.lets-work-icon1{
+    position: relative;
+    width: 30px;
+    right: -2%;
+    bottom: -23px;
+}
+
+
+.lets-work-icon2{
+    position: relative;
+    top: -10%;
+}
+
+
+.lets-work2{
+    gap: 40px;
+}

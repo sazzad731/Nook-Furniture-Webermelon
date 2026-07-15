@@ -12,10 +12,25 @@ body {
 
 
 
+.no-flex{
+    display: flex;
+    align-items: center;
+}
+
+
 .no-flex-center{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.no-flex-col{
+    flex-direction: column;
+
+}
+
+.no-text-center{
+    text-align: center;
 }
 
 .no-flex-between{
@@ -35,6 +50,7 @@ body {
     font-size: 48px;
     line-height: 130%;
     color: #303635;
+    text-align: center;
 }
 
 

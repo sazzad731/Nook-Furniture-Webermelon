@@ -16,16 +16,21 @@
         display: none;
     }
 
-    .futura-col-1 > h2{
+    .futura-col-1>h2 {
         font-size: 44px;
     }
 
-    .futura-stats{
+    .futura-stats {
         padding: 20px;
     }
 
-    .futura-stat > span{
+    .futura-stat>span {
         font-size: 32px;
+    }
+
+
+    .why-us-card-group {
+        gap: 50px;
     }
 }
 
@@ -36,16 +41,16 @@
     .swiper-slide>p {
         font-size: 16px;
     }
-    
-    .futura-container2{
+
+    .futura-container2 {
         flex-direction: column-reverse;
     }
 
-    .no-section-title{
+    .no-section-title {
         font-size: 32px;
     }
 
-    .futura-stats{
+    .futura-stats {
         gap: 80px
     }
 }
@@ -67,12 +72,12 @@
         gap: 40px
     }
 
-    .futura-stat > p {
+    .futura-stat>p {
         font-size: 16px;
     }
-    
-    
-    .futura-stat > span {
+
+
+    .futura-stat>span {
         font-size: 20px;
     }
 
@@ -82,12 +87,17 @@
     }
 
 
-    .futura-col-1 > h2 {
+    .futura-col-1>h2 {
         font-size: 32px;
     }
 
 
-    .futura-col-1 > p {
+    .futura-col-1>p {
         font-size: 16px;
+    }
+
+
+    .why-us-card-group {
+        flex-direction: column;
     }
 }
