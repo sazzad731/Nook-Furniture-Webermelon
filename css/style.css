@@ -10,8 +10,8 @@
 /* Regular Weight (400) */
 @font-face {
     font-family: "Roslindale";
-    src: url('./assets/Roslindale_Web/fonts/Roslindale-TextRegular-Testing.woff2') format("woff2"),
-         url('./assets/Roslindale_Web/fonts/Roslindale-TextRegular-Testing.woff') format("woff");
+    src: url('../assets/fonts/Roslindale-TextRegular-Testing.woff2') format("woff2"),
+         url('../assets/fonts/Roslindale-TextRegular-Testing.woff') format("woff");
     font-weight: 400; /* normal */
     font-style: normal;
     font-display: swap;
@@ -20,8 +20,8 @@
 /* Medium Weight (500) */
 @font-face {
     font-family: "Roslindale";
-    src: url('./assets/Roslindale_Web/fonts/Roslindale-TextMedium-Testing.woff2') format("woff2"),
-         url('./assets/Roslindale_Web/fonts/Roslindale-TextMedium-Testing.woff') format("woff");
+    src: url('../assets/fonts/Roslindale-TextMedium-Testing.woff2') format("woff2"),
+         url('../assets/fonts/Roslindale-TextMedium-Testing.woff') format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -30,8 +30,8 @@
 /* SemiBold Weight (600) */
 @font-face {
     font-family: "Roslindale";
-    src: url('./assets/Roslindale_Web/fonts/Roslindale-TextSemiBold-Testing.woff2') format("woff2"),
-         url('./assets/Roslindale_Web/fonts/Roslindale-TextSemiBold-Testing.woff') format("woff");
+    src: url('../assets/fonts/Roslindale-TextSemiBold-Testing.woff2') format("woff2"),
+         url('../assets/fonts/Roslindale-TextSemiBold-Testing.woff') format("woff");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -40,9 +40,9 @@
 /* Bold Weight (700) */
 @font-face {
     font-family: "Roslindale";
-    src: url('./assets/Roslindale_Web/fonts/Roslindale-TextBold-Testing.woff2') format("woff2"),
-         url('./assets/Roslindale_Web/fonts/Roslindale-TextBold-Testing.woff') format("woff");
-    font-weight: 700; /* bold */
+    src: url('../assets/fonts/Roslindale-TextBold-Testing.woff2') format("woff2"),
+        url('../assets/fonts/Roslindale-TextBold-Testing.woff') format("woff");
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -96,7 +96,7 @@ header{
 
 /* main body css */
 .hero{
-    background-image: url("./assets/hero-bg.png");
+    background-image: url("../assets/hero-bg.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -283,45 +283,190 @@ h1{
 
 
 
-
-@media screen and (max-width: 1300px) {
-    .container{
-        margin-inline: 12px
-    }
+/* popular collection section */
+.collection{
+    margin-bottom: 203px;
 }
 
 
-@media screen and (max-width: 1024px) {
-    .hero-content{
-        justify-content: center;
-    }
-    
-    .hero-img-1{
-        display: none;
-    }
+.popular-category {
+    margin: 50px 0px 48px 0px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+}
 
-    .hero-img-2 {
-        width: 100%;
-        height: auto;
-    }
-
-    .floating-seal{
-        display: none;
-    }
+.popular-category::-webkit-scrollbar {
+    display: none;
 }
 
 
-@media screen and (max-width: 425px) {
-    h1{
-        font-size: 40px;
-    }
+.popular-category>ul {
+    max-width: fit-content;
+    margin: 0 auto;
+    list-style: none;
+    color: #414141;
+    font-size: 18px;
+}
 
-    .brand{
-        font-size: 16px;
-    }
+
+.popular-category>ul>li {
+    cursor: pointer;
+    padding: 20px 22px;
+    border-bottom: 2px solid #CFCFCF;
+}
 
 
-    .custom-navigation-wrapper{
-        display: none;
-    }
+.popular-category>ul>li:hover {
+    color: #00494A;
+    border-bottom: 2px solid #00494A;
+}
+
+
+.collection-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+
+.collection-grid-item{
+    margin-bottom: 48px;
+}
+
+
+.collection-grid-item > img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.collection-grid-item > h4{
+    font-size: 20px;
+    font-weight: 700;
+    color: #303635;
+    margin-bottom: 14px;
+}
+
+
+.collection-grid-item > span{
+    font-size: 20px;
+    font-weight: 400;
+    color: #888888;
+}
+
+
+
+.collection-btn > a{
+    font-family: "Inter", sans-serif;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #00494A;
+}
+
+
+
+
+
+
+/* Futura designed for Better living */
+.futura-container{
+    background-color: #02494B;
+    padding: 150px 0px;
+}
+
+
+.futura-container2{
+    gap: 54px;
+}
+
+
+
+.futura-col-1 > h2{
+    color: white;
+    font-weight: 700;
+    font-size: 56px;
+    margin-bottom: 32px;
+    max-width: 545px;
+}
+
+
+.futura-col-1 > p {
+    font-size: 20px;
+    color: #F7F8F7;
+    font-family: "Inter", sans-serif;
+    max-width: 544px;
+    margin-bottom: 24px;
+}
+
+
+
+.futura-col-1 > a{
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.futura-stats{
+    background-color: #F7F8F7;
+    background-image: url("../assets/living-stats-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -55px;
+    max-width: fit-content;
+    padding: 48px 56px;
+    gap: 117px;
+    margin-top: 81px;
+    color: #00494A;
+}
+
+
+.futura-stat > p{
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+
+.futura-stat > span{
+    font-size: 40px;
+    font-weight: 400;
+    text-wrap: nowrap;
+}
+
+
+.futura-col-2{
+    position: relative;
+}
+
+
+.rectangle{
+    position: absolute;
+    background-color: #02494B;
+    width: 40%;
+    height: 14%;
+    right: 0px;
+}
+
+
+
+.vertical-line {
+    position: absolute;
+    background-color: #02494B;
+    width: 20px;
+    height: 100%;
+    right: 38%;
+}
+
+
+
+.futura-col-2 > img{
+    width: 100%;
 }

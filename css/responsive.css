@@ -1,0 +1,93 @@
+@media screen and (max-width: 1024px) {
+    .hero-content {
+        justify-content: center;
+    }
+
+    .hero-img-1 {
+        display: none;
+    }
+
+    .hero-img-2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .floating-seal {
+        display: none;
+    }
+
+    .futura-col-1 > h2{
+        font-size: 44px;
+    }
+
+    .futura-stats{
+        padding: 20px;
+    }
+
+    .futura-stat > span{
+        font-size: 32px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .swiper-slide>p {
+        font-size: 16px;
+    }
+    
+    .futura-container2{
+        flex-direction: column-reverse;
+    }
+
+    .no-section-title{
+        font-size: 32px;
+    }
+
+    .futura-stats{
+        gap: 80px
+    }
+}
+
+
+
+
+@media screen and (max-width: 425px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .brand {
+        font-size: 16px;
+    }
+
+
+    .futura-stats {
+        gap: 40px
+    }
+
+    .futura-stat > p {
+        font-size: 16px;
+    }
+    
+    
+    .futura-stat > span {
+        font-size: 20px;
+    }
+
+
+    .custom-navigation-wrapper {
+        display: none;
+    }
+
+
+    .futura-col-1 > h2 {
+        font-size: 32px;
+    }
+
+
+    .futura-col-1 > p {
+        font-size: 16px;
+    }
+}

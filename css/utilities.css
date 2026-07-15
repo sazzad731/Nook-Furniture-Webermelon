@@ -11,6 +11,7 @@ body {
 }
 
 
+
 .no-flex-center{
     display: flex;
     align-items: center;
@@ -21,4 +22,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+
+.no-text-center{
+    text-align: center;
+}
+
+
+.no-section-title{
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 130%;
+    color: #303635;
+}
+
+
+
+
+@media screen and (max-width: 1300px) {
+    .container {
+        margin-inline: 12px
+    }
 }
