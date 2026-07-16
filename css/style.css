@@ -127,6 +127,7 @@ h1{
 .hero-images{
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
 
@@ -325,18 +326,20 @@ h1{
 
 .collection-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
     gap: 24px;
 }
 
 
 .collection-grid-item{
     margin-bottom: 48px;
+    /* width: 100%;
+    max-width: 307px; */
 }
 
 
 .collection-grid-item > img{
-    width: 100%;
+    /* width: 100%; */
     margin-bottom: 20px;
 }
 
@@ -372,7 +375,7 @@ h1{
 
 /* Futura designed for Better living */
 .futura-container{
-    background-color: #02494B;
+    background-color: var(--nook-primary-color);
     padding: 150px 0px;
 }
 
@@ -447,9 +450,18 @@ h1{
 }
 
 
+.futura-col-2 .futura-seal {
+    position: absolute;
+    max-width: 158.41px;
+    right: 50px;
+    top: -90px;
+    z-index: 20;
+}
+
+
 .rectangle{
     position: absolute;
-    background-color: #02494B;
+    background-color: var(--nook-primary-color);
     width: 40%;
     height: 14%;
     right: 0px;
@@ -459,7 +471,7 @@ h1{
 
 .vertical-line {
     position: absolute;
-    background-color: #02494B;
+    background-color: var(--nook-primary-color);
     width: 20px;
     height: 100%;
     right: 38%;
@@ -513,11 +525,93 @@ h1{
 
 
 /* contact us section */
-
 .contact-container {
     background-color: #00494A;
     margin: 109px 0px 104px 0px;
     padding: 70px 102px;
+    width: 100%;
+}
+
+
+.contact-content {
+    width: 100%;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.contact-form>form {
+    width: 100%;
+}
+
+
+.contact-form > form > input {
+    padding: 16px 32px;
+    background-color: #005F61;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100%;
+    margin-bottom: 32px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #C3C5C6;
+
+    &::placeholder {
+        font-size: 18px;
+        font-weight: 400;
+        color: #C3C5C6;
+    }
+}
+
+
+.contact-form>form>div {
+    position: relative;
+    margin-bottom: 40px;
+
+    textarea {
+        background-color: #005F61;
+        padding: 16px 32px;
+        border: none;
+        outline: none;
+        color: white;
+        width: 100%;
+        height: 185px;
+        font-size: 18px;
+        font-weight: 400;
+        color: #C3C5C6;
+
+        &::placeholder {
+            font-size: 18px;
+            font-weight: 400;
+            color: #C3C5C6;
+        }
+    }
+
+    span {
+        position: absolute;
+        bottom: 32px;
+        right: 16px;
+        color: #989898;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: "Inter", sans-serif;
+        user-select: none;
+    }
+}
+
+
+.contact-form>form>button {
+    width: 170px;
+    height: 62px;
+    border: 1px solid #F4F5F5;
+    background-color: transparent;
+    color: #F4F5F5;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
 }
 
 
@@ -525,6 +619,15 @@ h1{
     font-weight: 400;
     font-size: 72px;
     color: #F4F5F5;
+}
+
+
+.contact-p{
+    font-size: 18px;
+    font-weight: 400;
+    color: #D8D8D8;
+    max-width: 472px;
+    line-height: 32px;
 }
 
 
@@ -549,4 +652,118 @@ h1{
 
 .lets-work2{
     gap: 40px;
+    margin-bottom: 24px;
+}
+
+
+
+
+footer{
+    background-color: #FAFAFA;
+    padding: 65px 0px;
+}
+
+
+
+.footer-logo{
+    margin-bottom: 30.85px;
+}
+
+
+
+.footer-p{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #5A5E5E;
+    margin-bottom: 52px;
+}
+
+
+.footer-social-icon{
+    gap: 30.33px;
+}
+
+
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 45px;
+}
+
+
+.footer-container > ul{
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+
+.footer-container > ul > li > a{
+    text-decoration: none;
+    color: #495050;
+}
+
+
+.footer-ul-1{
+    gap: 16px;
+}
+
+.footer-ul-2{
+    gap: 24px;
+}
+
+
+
+.footer-container h3{
+    font-weight: 500;
+    font-size: 32px;
+    color: #283E2E;
+    margin-bottom: 34px;
+}
+
+
+.footer-container button{
+    background-color: #00494A;
+    color: #F7F7F7;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 15px 60px;
+    font-family: "Inter", sans-serif;
+}
+
+
+.copyright-container{
+    padding: 16px 0px;
+    margin-top: 50px;
+    border-top: 1px solid #9C9E9E;
+    text-align: center;
+    flex-wrap: wrap-reverse;
+    gap: 20px;
+}
+
+
+.copyright-container > p{
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #5A5E5E;
+}
+
+.copyright-container > div{
+    gap: 75.61px;
+}
+
+
+.copyright-container > div > a{
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    color: #495050;
 }

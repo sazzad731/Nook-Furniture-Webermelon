@@ -12,6 +12,15 @@
         height: auto;
     }
 
+
+    .collection-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+        place-items: center;
+    }
+
+
     .floating-seal {
         display: none;
     }
@@ -31,6 +40,28 @@
 
     .why-us-card-group {
         gap: 50px;
+    }
+
+    .contact-container {
+        padding: 20px;
+        gap: 20px;
+
+        .contact-content {
+            .lets-work1 h2,
+            .lets-work2 h2 {
+                font-size: 52px;
+            }
+        }
+
+        .contact-form {
+            form {
+                button {
+                    width: 140px;
+                    height: 52px;
+                    font-size: 18px;
+                }
+            }
+        }
     }
 }
 
@@ -53,6 +84,18 @@
     .futura-stats {
         gap: 80px
     }
+
+
+    .contact-container {
+        flex-direction: column;
+        
+        .contact-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 }
 
 
@@ -65,6 +108,11 @@
 
     .brand {
         font-size: 16px;
+    }
+
+
+    .futura-seal{
+        width: 100px;
     }
 
 
@@ -99,5 +147,14 @@
 
     .why-us-card-group {
         flex-direction: column;
+    }
+
+    .contact-container {
+        .contact-content {
+            .lets-work1 h2,
+            .lets-work2 h2 {
+                font-size: 32px;
+            }
+        }
     }
 }
