@@ -1,28 +1,24 @@
+@media screen and (max-width: 1440px) {
+    .floating-seal{
+        top: -4.5%;
+    }
+}
+
+
 @media screen and (max-width: 1024px) {
     .hero-content {
         justify-content: center;
     }
 
-    .hero-img-1 {
-        display: none;
+    .floating-seal {
+        top: 0.5%;
+        left: 35%;
     }
-
-    .hero-img-2 {
-        width: 100%;
-        height: auto;
-    }
-
 
     .collection-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 24px;
         place-items: center;
-    }
-
-
-    .floating-seal {
-        display: none;
     }
 
     .futura-col-1>h2 {
@@ -69,15 +65,24 @@
 
 
 @media screen and (max-width: 768px) {
+    .floating-seal {
+        top: 6.5%;
+        left: 34%;
+    }
+    
     .swiper-slide>p {
         font-size: 16px;
+    }
+
+    .swiper-slide{
+        max-width: 274px;
     }
 
     .futura-container2 {
         flex-direction: column-reverse;
     }
 
-    .no-section-title {
+    .nook-section-title {
         font-size: 32px;
     }
 
@@ -102,12 +107,37 @@
 
 
 @media screen and (max-width: 425px) {
+    .hero-images{
+        flex-direction: column;
+    }
+
+    .hero-img-2{
+        margin-top: 0px;
+    }
+
+    .hero-image1-container{
+        padding-bottom: 20px;
+    }
+
+    .hero-img-1{
+        max-width: 100%;
+    }
+    
     h1 {
         font-size: 40px;
     }
 
     .brand {
         font-size: 16px;
+    }
+
+
+    .collection-grid-item{
+        width: 100%;
+    }
+
+    .collection-image {
+        width: 100%;
     }
 
 
@@ -127,11 +157,6 @@
 
     .futura-stat>span {
         font-size: 20px;
-    }
-
-
-    .custom-navigation-wrapper {
-        display: none;
     }
 
 
