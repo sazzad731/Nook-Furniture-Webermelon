@@ -8,7 +8,9 @@
 @media screen and (max-width: 1024px) {
     .hero-content {
         justify-content: center;
+        margin-top: 22px;
     }
+
 
     .floating-seal {
         top: 0.5%;
@@ -16,13 +18,21 @@
     }
 
     .collection-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        place-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .swiper-slide {
+        max-width: 231px;
     }
 
     .futura-col-1>h2 {
         font-size: 44px;
+    }
+
+    .futura-seal {
+        max-width: 122.41px;
+        right: 23px;
+        top: -60px;
     }
 
     .futura-stats {
@@ -41,13 +51,6 @@
     .contact-container {
         padding: 20px;
         gap: 20px;
-
-        .contact-content {
-            .lets-work1 h2,
-            .lets-work2 h2 {
-                font-size: 52px;
-            }
-        }
 
         .contact-form {
             form {
@@ -75,7 +78,17 @@
     }
 
     .swiper-slide{
-        max-width: 274px;
+        max-width: 230px;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .futura-seal {
+        max-width: 148.41px;
+        right: 42px;
+        top: -60px;
     }
 
     .futura-container2 {
@@ -107,8 +120,21 @@
 
 
 @media screen and (max-width: 425px) {
+    .hero-content {
+        margin-top: 22px;
+    }
+
+    .hero-h1{
+        margin-bottom: 20px;
+    }
+    
     .hero-images{
         flex-direction: column;
+        gap: 32px;
+    }
+
+    .hero-img-content{
+        margin-top: 10px;
     }
 
     .hero-img-2{
@@ -123,7 +149,7 @@
         max-width: 100%;
     }
     
-    h1 {
+    .hero-h1 {
         font-size: 40px;
     }
 
@@ -132,22 +158,66 @@
     }
 
 
-    .collection-grid-item{
-        width: 100%;
+    .swiper-slide{
+        max-width: 188px;
     }
+
+
+    .custom-navigation-wrapper{
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .popular-category{
+        margin-top: 30px;
+    }
+
+    .collection{
+        margin-bottom: 100px;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
 
     .collection-image {
         width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+    .collection-h4{
+        margin-bottom: 10px;
+    }
+
+    .collection-btn{
+        padding-top: 24px;
+    }
+
+
+
+    .futura-container{
+        padding: 100px 0px;
+    }
+
+
+    .futura-container2{
+        gap: 20px;
     }
 
 
     .futura-seal{
-        width: 100px;
+        max-width: 101.41px;
+        right: 26px;
+        top: -55px;
     }
 
 
     .futura-stats {
-        gap: 40px
+        gap: 40px;
+        margin-top: 40px;
     }
 
     .futura-stat>p {
@@ -160,26 +230,74 @@
     }
 
 
-    .futura-col-1>h2 {
+    .futura-h2 {
         font-size: 32px;
+        margin-bottom: 7px;
     }
 
 
-    .futura-col-1>p {
-        font-size: 16px;
+    .futura-p {
+        margin-bottom: 14px;
+        line-height: 26px;
     }
 
+
+    .why-container{
+        padding: 80px 0px;
+    }
+
+    .why-us-h2{
+        margin-bottom: 44px;
+    }
 
     .why-us-card-group {
         flex-direction: column;
     }
 
-    .contact-container {
-        .contact-content {
-            .lets-work1 h2,
-            .lets-work2 h2 {
-                font-size: 32px;
-            }
-        }
+    .why-us-img{
+        margin-bottom: 15px;
+    }
+
+    .why-us-h3{
+        margin-bottom: 7px;
+    }
+
+    .why-us-p{
+        line-height: 22px;
+    }
+
+
+    .contact-p{
+        line-height: 22px;
+    }
+
+
+    .footer-container{
+        gap: 28px;
+    }
+
+    .footer-logo{
+        margin-bottom: 14.85px;
+    }
+
+    .footer-h3{
+        margin-bottom: 20px;
+    }
+
+    .footer-p{
+        margin-bottom: 24px;
+    }
+
+
+    .footer-ul-1{
+        gap: 8px;
+    }
+
+    .footer-ul-2{
+        gap: 7px;
+    }
+
+    .copyright-container{
+        margin-top: 30px;
     }
 }
