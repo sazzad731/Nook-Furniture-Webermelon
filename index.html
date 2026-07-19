@@ -13,20 +13,18 @@
 <body>
     <header>
         <div class="container navbar nook-flex-between">
-            <div class="nook-flex-between logo-3line">
-                <a href="/" class="logo">
-                    <img src="./assets/logo.png" alt="logo">
-                </a>
-                <div class="menu-bar nook-flex-center nook-flex-col">
-                    <div class="line line1"></div>
-                    <div class="line line2"></div>
-                    <div class="line line1"></div>
-                </div>
+            <a href="/" class="logo">
+                <img src="./assets/logo.png" alt="logo">
+            </a>
+            <div class="menu-bar nook-flex-center nook-flex-col">
+                <img src="./assets/icons/line-top.svg" alt="svg line">
+                <img src="./assets/icons/line-middle.svg" alt="svg line">
+                <img src="./assets/icons/line-top.svg" alt="svg line">
             </div>
             <div class="nav-icons nook-flex">
-                <a href="#"><img src="./assets/icons/user.png" alt="User icon"></a>
-                <a href="#"><img src="./assets/icons/heart.png" alt="Heart icon"></a>
-                <a href="#"><img src="./assets/icons/cart.png" alt="Shopping cart"></a>
+                <a href="#"><img src="./assets/icons/user.svg" alt="User icon"></a>
+                <a href="#"><img src="./assets/icons/heart.svg" alt="Heart icon"></a>
+                <a href="#"><img src="./assets/icons/cart.svg" alt="Shopping cart"></a>
             </div>
         </div>
     </header>
@@ -80,32 +78,32 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide nook-relative">
-                        <p class="nook-absolute nook-font-400">Sofa</p>
+                        <p class="nook-absolute nook-font-400 swiper-p">Sofa</p>
                         <div class="overlay nook-absolute"></div>
                         <img src="./assets/slider1.png" alt="slide furniture image">
                     </div>
                     <div class="swiper-slide nook-relative">
-                        <p class="nook-absolute nook-font-400">Chairs</p>
+                        <p class="nook-absolute nook-font-400 swiper-p">Chairs</p>
                         <div class="overlay nook-absolute"></div>
                         <img src="./assets/slider2.png" alt="slide furniture image">
                     </div>
                     <div class="swiper-slide nook-relative">
-                        <p class="nook-absolute nook-font-400">Accessories</p>
+                        <p class="nook-absolute nook-font-400 swiper-p">Accessories</p>
                         <div class="overlay nook-absolute"></div>
                         <img src="./assets/slider3.png" alt="slide furniture image">
                     </div>
                     <div class="swiper-slide nook-relative">
-                        <p class="nook-absolute nook-font-400">Table</p>
+                        <p class="nook-absolute nook-font-400 swiper-p">Table</p>
                         <div class="overlay nook-absolute"></div>
                         <img src="./assets/slider1.png" alt="slide furniture image">
                     </div>
                     <div class="swiper-slide nook-relative">
-                        <p class="nook-absolute nook-font-400">Accessories</p>
+                        <p class="nook-absolute nook-font-400 swiper-p">Accessories</p>
                         <div class="overlay nook-absolute"></div>
                         <img src="./assets/slider3.png" alt="slide furniture image">
                     </div>
                     <div class="swiper-slide nook-relative">
-                        <p class="nook-absolute nook-font-400">Chairs</p>
+                        <p class="nook-absolute nook-font-400 swiper-p">Chairs</p>
                         <div class="overlay nook-absolute"></div>
                         <img src="./assets/slider2.png" alt="slide furniture image">
                     </div>
@@ -113,9 +111,9 @@
             
                 <!-- If we need navigation buttons -->
                 <div class="custom-navigation-wrapper nook-flex-center nook-absolute">
-                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-prev-custom"><img src="./assets/icons/arrow-left.svg" alt="svg"></div>
                     <span class="scroll-text nook-font-20px nook-font-inter">Scroll</span>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-next-custom"><img src="./assets/icons/arrow-right.svg" alt="svg"></div>
                 </div>
             </div>
         </section>
@@ -186,11 +184,11 @@
         <!-- Futura designed for Better living section -->
          <section class="futura-container">
             <div class="container nook-flex-between futura-container2">
-                <div class="futura-col-1 nook-font-500">
+                <div class="futura-col-left nook-font-500">
                     <h2 class="nook-font-700 futura-h2">Futura designed for Better living</h2>
                     <p class="nook-font-20px nook-font-inter futura-p nook-font-400">Introducing collections of high-quality furniture that bear
                         all the hallmarkes of British engineering.</p>
-                    <a class="nook-font-inter nook-font-18px nook-flex nook-font-500" href="#">Read more <img src="./assets/icons/arrow-up-right.png" alt="arrow icon"></a>
+                    <a class="nook-font-inter nook-font-18px nook-flex nook-font-500 read-more" href="#">Read more <img src="./assets/icons/arrow-up-right.png" alt="arrow icon"></a>
                     <div class="futura-stats nook-flex-center">
                         <div class="futura-stat">
                             <p class="nook-font-400 nook-font-inter nook-font-24px futura-stat-p">Furniture</p>
@@ -206,7 +204,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="futura-col-2 nook-relative">
+                <div class="futura-col-right nook-relative">
                     <img class="futura-seal nook-absolute" src="./assets/futura-seal.png" alt="image">
                     <div class="rectangle nook-absolute"></div>
                     <div class="vertical-line nook-absolute"></div>

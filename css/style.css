@@ -53,6 +53,10 @@ header{
     background-color: var(--nook-secondary-color);
 }
 
+.logo{
+    width: 109px;
+}
+
 .navbar{
     padding: 37px 0px 13px 0px;
     background-color: var(--nook-secondary-color);
@@ -63,25 +67,6 @@ header{
     gap: 8px;
     cursor: pointer;
     padding: 0px 12px;
-}
-
-.logo-3line{
-    width: 100%;
-    max-width: 50.7162%;
-}
-
-
-.line{
-    border: 1px solid #004C4C;
-    border-radius: 10px;
-}
-
-.line1{
-    width: 28px;
-}
-
-.line2{
-    width: 20px;
 }
 
 
@@ -210,7 +195,7 @@ header{
 
 .swiper-slide{
     width: 100%;
-    max-width: 307px;
+    /* max-width: 307px; */
 }
 
 
@@ -244,35 +229,16 @@ header{
     height: 140px;
     background-color: #f4f4f4;
     border-radius: 50%;
-    gap: 8px;
+    gap: 14px;
 }
 
 
-.swiper-button-prev {
-    background-image: url(../assets/icons/arrow-left.png) !important;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0% 90%;
-}
-
-.swiper-button-next {
-    background-image: url(../assets/icons/arrow-left.png) !important;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0% 90%;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-}
-
-
-
-
-.custom-navigation-wrapper .swiper-button-prev,
-.custom-navigation-wrapper .swiper-button-next {
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
     position: static;
-    width: 8px;
-    padding-top: -21px;
+    padding-top: 5px;
     color: var(--nook-secondary-color);
+    cursor: pointer;
 }
 
 .scroll-text {
@@ -402,7 +368,7 @@ header{
 
 
 
-.futura-col-1 > a{
+.read-more{
     color: white;
     gap: 8px;
     line-height: 32px;
@@ -415,7 +381,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px -55px;
-    /* max-width: fit-content; */
+    width: 638px;
     padding: 48px 56px;
     gap: 117px;
     margin-top: 81px;
@@ -425,12 +391,14 @@ header{
 
 .futura-stat-p{
     margin-bottom: 24px;
+    line-height: 40px;
 }
 
 
 .futura-stat-span{
     font-size: 40px;
     text-wrap: nowrap;
+    line-height: 56px;
 }
 
 
@@ -463,6 +431,7 @@ header{
 
 .futura-main-img{
     width: 100%;
+    max-width: 609px;
 }
 
 
@@ -651,8 +620,8 @@ header{
 
 .footer-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 45px;
+    grid-template-columns: 363.24px 1fr 1fr 318px;
+    gap: clamp(28px, 5vw, 73.85px);
 }
 
 
@@ -660,6 +629,7 @@ header{
     display: flex;
     flex-direction: column;
     line-height: 28px;
+    max-width: 95.8px;
 }
 
 

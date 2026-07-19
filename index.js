@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function(){
           element.textContent = `${target} +`
           clearInterval(counter);
         }else{
-          element.textContent = `${Math.floor(count)}`
+          element.textContent = `${Math.floor(count)} +`
         }
       },20)
     }
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-let slidesPerView = 4;
+let slidesPerView = 4.20;
 // if(screen.width === 1024){
 //   slidesPerView = 3;
 // }
@@ -125,7 +125,7 @@ if(screen.width <= 768){
   slidesPerView = 3;
 }
 if(screen.width <= 425){
-  slidesPerView = 2;
+  slidesPerView = 1;
 }
 const swiper = new Swiper(".swiper", {
   // Optional parameters
@@ -142,7 +142,7 @@ const swiper = new Swiper(".swiper", {
 
   // Navigation arrows
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next-custom",
+    prevEl: ".swiper-button-prev-custom",
   },
 });
