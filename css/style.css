@@ -167,10 +167,10 @@ header{
 .ticker-track {
     display: flex;
     width: max-content;
+    gap: 24px;
 }
 
 .brand {
-    padding: 0 40px;
     font-size: 22px;
     color: #6D7373;
     gap: 24px;
@@ -205,11 +205,11 @@ header{
 }
 
 
-.swiper-slide > p{
+.swiper-p{
     left: 16px;
     bottom: 16px;
     color: white;
-    font-size: 28px;
+    font-size: clamp(24px, 5.64vw, 28px);
     z-index: 10;
 }
 

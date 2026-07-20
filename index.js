@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-let slidesPerView = 4.20;
+let slidesPerView = 4.21;
 // if(screen.width === 1024){
 //   slidesPerView = 3;
 // }
@@ -125,7 +125,7 @@ if(screen.width <= 768){
   slidesPerView = 3;
 }
 if(screen.width <= 425){
-  slidesPerView = 1;
+  slidesPerView = 2;
 }
 const swiper = new Swiper(".swiper", {
   // Optional parameters
