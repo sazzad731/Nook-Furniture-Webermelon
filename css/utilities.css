@@ -130,6 +130,39 @@
 }
 
 
+.nook-btn-outline{
+    border: 1px solid #F4F5F5;
+    background-color: transparent;
+    color: #F4F5F5;
+    cursor: pointer;
+    line-height: 32px;
+    transition: all 0.5s ease;
+    padding: 15px 60px;
+
+    &:hover{
+        background-color: #F4F5F5;
+        color: var(--nook-primary-color);
+    }
+}
+
+
+.nook-btn-fill{
+    background-color: var(--nook-secondary-text);
+    color: #F7F7F7;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 60px;
+    line-height: 32px;
+    transition: all .5s ease;
+    
+
+    &:hover{
+        background-color: var(--nook-secondary-text-hover);
+    }
+}
+
+
 
 
 

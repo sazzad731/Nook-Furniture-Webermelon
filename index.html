@@ -22,9 +22,9 @@
                 <img src="./assets/icons/line-top.svg" alt="svg line">
             </div>
             <div class="nav-icons nook-flex">
-                <a href="#"><img src="./assets/icons/user.svg" alt="User icon"></a>
-                <a href="#"><img src="./assets/icons/heart.svg" alt="Heart icon"></a>
-                <a href="#"><img src="./assets/icons/cart.svg" alt="Shopping cart"></a>
+                <a class="nook-flex" href="#"><img class="nav-icon" src="./assets/icons/user.svg" alt="User icon"></a>
+                <a class="nook-flex" href="#"><img class="nav-icon" src="./assets/icons/heart.svg" alt="Heart icon"></a>
+                <a class="nook-flex" href="#"><img class="nav-icon" src="./assets/icons/cart.svg" alt="Shopping cart"></a>
             </div>
         </div>
         <ul class="nook-list nook-flex-between nook-flex-col nook-font-400 nook-font-20px nook-absolute nav-dropdown">
@@ -191,7 +191,7 @@
         <!-- Futura designed for Better living section -->
          <section class="futura-container">
             <div class="container nook-flex-between futura-container2">
-                <div class="futura-col-left nook-font-500">
+                <div class="futura-col-left">
                     <h2 class="nook-font-700 futura-h2">Futura designed for Better living</h2>
                     <p class="nook-font-20px nook-font-inter futura-p nook-font-400">Introducing collections of high-quality furniture that bear
                         all the hallmarkes of British engineering.</p>
@@ -251,7 +251,7 @@
 
           <!-- contact us section -->
            <section class="container" id="contact">
-            <div class="nook-flex contact-container">
+            <div class="contact-container">
                 <div class="contact-content">
                     <div class="nook-flex contact-content2">
                         <h2 class="nook-font-400 contact-h2">Let’s work</h2> <img class="lets-work-icon" src="./assets/icons/star-group.png" alt="icon">
@@ -266,10 +266,10 @@
                     <form class="contact-form" action="">
                         <input class="nook-font-400 nook-font-18px nook-font-inter input-email" type="email" name="email" placeholder="Enter Your Email">
                         <div class="nook-relative textarea-div">
-                            <textarea class="text-area nook-font-18px nook-font-400 nook-font-inter contact-textarea" name="message" placeholder="Type Your Message"></textarea>
+                            <textarea class="text-area nook-font-18px nook-font-400 nook-font-inter contact-textarea" name="message" maxlength="200" placeholder="Type Your Message"></textarea>
                             <span class="textarea-char-display nook-absolute nook-font-20px nook-font-inter">0/200</span>
                         </div>
-                        <button class="nook-font-600 nook-font-20px nook-font-inter mss-send-btn">Send</button>
+                        <button class="nook-font-20px nook-font-600 nook-font-inter nook-btn-outline">Send</button>
                     </form>
                 </div>
             </div>
@@ -279,7 +279,7 @@
            <footer class="footer">
             <div class="container">
                 <div class="footer-container">
-                    <div>
+                    <div class="footer-col-1">
                         <img class="footer-logo" src="./assets/footer-logo.png" alt="logo image">
                         <p class="footer-p nook-font-400 nook-font-inter nook-font-18px">Custom furniture for minimalist life. We make beautiful design and sustainable furniture in country</p>
                         <div class="nook-flex footer-social-icon">
@@ -301,9 +301,9 @@
                         <li class="footer-ul-li"><a class="footer-ul-li-a" href="#">Return</a></li>
                         <li class="footer-ul-li"><a class="footer-ul-li-a" href="#">Shipping</a></li>
                     </ul>
-                    <div>
+                    <div class="footer-col-2">
                         <h3 class="nook-font-500 footer-h3">Free consultation for your furniture?</h3>
-                        <button class="nook-font-600 nook-font-20px nook-font-inter footer-btn">Contact Us</button>
+                        <button class="nook-font-600 nook-font-20px nook-font-inter nook-btn-fill">Contact Us</button>
                     </div>
                 </div>
                 <div class="copyright-container nook-flex-between nook-text-center">
