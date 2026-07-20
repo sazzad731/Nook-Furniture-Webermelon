@@ -57,8 +57,67 @@ document.addEventListener("DOMContentLoaded", function(){
     })
 
   }
-
   handleCategory();
+
+
+  // Futura stat Animation
+  function handleStats() {
+    const stats = document.querySelectorAll(".stat-value");
+
+    function startCounting(element) {
+      const target = parseInt(element.getAttribute('data-stat-value'));
+      let count = 0;
+      const duration = 2000;
+      const increment = target / (duration / 20);
+
+      const counter = setInterval(() => { 
+        count += increment;
+        if (count >= target)
+        {
+          element.textContent = `${target} +`
+          clearInterval(counter)
+        } else { 
+          element.textContent = `${Math.floor(count)} +`
+        }
+      }, 20)
+    }
+
+
+    const observer = new IntersectionObserver((entries, observer) =>
+    {
+      entries.forEach(entry =>
+      {
+        if (entry.isIntersecting)
+        {
+          startCounting(entry.target);
+          observer.unobserve(entry.target);
+        }
+      })
+    }, { threshold: 0.5 });
+
+    stats.forEach((stat) => {
+      observer.observe(stat);
+    });
+    
+  }
+  handleStats();
+
+
+  // text message character count
+  function countCharacter() { 
+    const textArea = document.querySelector(".text-area");
+    const countDisplay = document.querySelector(".text-count-display");
+
+    textArea.addEventListener("input", (e) => {
+      countDisplay.innerText = `${e.target.value.length}/200`;
+      if (e.target.value.length > 200) {
+        countDisplay.style.color = "#f8b7b7";
+      }else{
+        countDisplay.style.color = "#989898";
+      }
+    })
+  }
+  countCharacter()
 })
 
 

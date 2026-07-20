@@ -108,7 +108,7 @@ header{
 
 
 h1{
-    font-size: 64px;
+    font-size: clamp(40px, 5vw, 64px);
     font-weight: 500;
     color: #303635;
     text-align: center;
@@ -422,7 +422,7 @@ h1{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px -55px;
-    max-width: fit-content;
+    max-width: 100%;
     padding: 48px 56px;
     gap: 117px;
     margin-top: 81px;
@@ -452,7 +452,7 @@ h1{
 
 .futura-col-2 .futura-seal {
     position: absolute;
-    max-width: 158.41px;
+    max-width: clamp(100px,12vw,158.41px);
     right: 50px;
     top: -90px;
     z-index: 20;
@@ -557,6 +557,7 @@ h1{
     font-size: 18px;
     font-weight: 400;
     color: #C3C5C6;
+    font-family: "Inter", sans-serif;
 
     &::placeholder {
         font-size: 18px;
@@ -566,7 +567,7 @@ h1{
 }
 
 
-.contact-form>form>div {
+.contact-form > form > div {
     position: relative;
     margin-bottom: 40px;
 
@@ -581,6 +582,7 @@ h1{
         font-size: 18px;
         font-weight: 400;
         color: #C3C5C6;
+        font-family: "Inter", sans-serif;
 
         &::placeholder {
             font-size: 18px;
