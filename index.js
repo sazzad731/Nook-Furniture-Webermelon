@@ -3,27 +3,48 @@ import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs
 
 
 document.addEventListener("DOMContentLoaded", function(){
-  const track = document.getElementById("tickerTrack");
+  // navbar dropdown functionality
+  function handleMenuDropdown(){
+    const menuBar = document.querySelector(".menu-bar");
+    const navDropdown = document.querySelector(".nav-dropdown");
 
-  const clone = track.innerHTML;
-  track.innerHTML += clone;
+    menuBar.addEventListener("click", ()=>{
+      if(navDropdown.classList.contains("active")){
+        navDropdown.classList.remove("active");
+      }else{
+        navDropdown.classList.add("active");
+      }
+    })
+  }
+  handleMenuDropdown();
+  
+  
+  
+  // marquee functionality
+  function handleMarquee(){
+    const track = document.getElementById("tickerTrack");
 
-  let speed = 1;
-  let position = 0;
+    const clone = track.innerHTML;
+    track.innerHTML = clone + clone + clone + clone;
 
-  function scrollTicker() {
-    position -= speed;
+    let speed = 1;
+    let position = 0;
 
-    if (Math.abs(position) >= track.scrollWidth / 2) {
-      position = 0;
+    function scrollTicker() {
+      position -= speed;
+
+      if (Math.abs(position) >= track.scrollWidth / 2) {
+        position = 0;
+      }
+
+      track.style.transform = `translateX(${position}px)`;
+
+      requestAnimationFrame(scrollTicker);
     }
 
-    track.style.transform = `translateX(${position}px)`;
-
-    requestAnimationFrame(scrollTicker);
-  }
-
-  scrollTicker();
+    scrollTicker();
+  };
+  handleMarquee();
 
 
 
@@ -60,64 +81,56 @@ document.addEventListener("DOMContentLoaded", function(){
   handleCategory();
 
 
-  // Futura stat Animation
-  function handleStats() {
-    const stats = document.querySelectorAll(".stat-value");
+  // Futura section stats
+  function handleStats(){
+    const statsValue = document.querySelectorAll(".stat-value")
 
-    function startCounting(element) {
-      const target = parseInt(element.getAttribute('data-stat-value'));
+    function startCounting(element){
+      const target = parseInt(element.getAttribute("data-stat-value"));
       let count = 0;
       const duration = 2000;
       const increment = target / (duration / 20);
 
-      const counter = setInterval(() => { 
+      const counter = setInterval(()=>{
         count += increment;
-        if (count >= target)
-        {
+        if(count >= target){
           element.textContent = `${target} +`
-          clearInterval(counter)
-        } else { 
+          clearInterval(counter);
+        }else{
           element.textContent = `${Math.floor(count)} +`
         }
-      }, 20)
+      },20)
     }
 
-
-    const observer = new IntersectionObserver((entries, observer) =>
-    {
-      entries.forEach(entry =>
-      {
-        if (entry.isIntersecting)
-        {
+    const observer = new IntersectionObserver((entries, observer)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
           startCounting(entry.target);
           observer.unobserve(entry.target);
         }
       })
-    }, { threshold: 0.5 });
+    }, {threshold: 0.5})
 
-    stats.forEach((stat) => {
-      observer.observe(stat);
-    });
-    
+    statsValue.forEach(stat=> observer.observe(stat));
   }
   handleStats();
 
 
-  // text message character count
-  function countCharacter() { 
-    const textArea = document.querySelector(".text-area");
-    const countDisplay = document.querySelector(".text-count-display");
+  // show character length in textarea
+  function handleTextarea(){
+    const textarea = document.querySelector(".text-area");
+    const charDisplay = document.querySelector(".textarea-char-display");
 
-    textArea.addEventListener("input", (e) => {
-      countDisplay.innerText = `${e.target.value.length}/200`;
-      if (e.target.value.length > 200) {
-        countDisplay.style.color = "#f8b7b7";
+    textarea.addEventListener("input", (event)=>{
+      charDisplay.textContent = `${event.target.value.length}/200`
+      if(event.target.value.length > 200){
+        charDisplay.style.color = "#f8bcbc";
       }else{
-        countDisplay.style.color = "#989898";
+        charDisplay.style.color = "#989898";
       }
     })
-  }
-  countCharacter()
+  };
+  handleTextarea()
 })
 
 
@@ -125,24 +138,32 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-
-
+let slidesPerView = 4.21;
+// if(screen.width === 1024){
+//   slidesPerView = 3;
+// }
+if(screen.width <= 768){
+  slidesPerView = 3;
+}
+if(screen.width <= 425){
+  slidesPerView = 2;
+}
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
   mousewheel: true,
-  
-  
+  slidesPerView: slidesPerView,
+  // freeMode: true,
+
   // If we need pagination
   pagination: {
-      el: ".swiper-pagination",
-    },
-    
-    // Navigation arrows
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    slidesPerView: 4,
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next-custom",
+    prevEl: ".swiper-button-prev-custom",
+  },
 });

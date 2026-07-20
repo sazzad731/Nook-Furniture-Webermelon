@@ -48,47 +48,66 @@
 }
 
 
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Roslindale", serif;
+    font-weight: normal;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
 /* header css */
-header{
-    background-color: #FAFAFA;
+.header{
+    background-color: var(--nook-secondary-color);
+}
+
+.logo{
+    width: 109px;
 }
 
 .navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 38px 0px 38px 0px;
-    background-color: #FAFAFA;
+    padding: 37px 0px 13px 0px;
+    background-color: var(--nook-secondary-color);
+    z-index: 30;
 }
 
 
 .menu-bar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 8px;
     cursor: pointer;
-}
-
-
-.line{
-    border: 1px solid #004C4C;
-    border-radius: 10px;
-}
-
-.line1{
-    width: 28px;
-}
-
-.line2{
-    width: 20px;
+    padding: 0px 12px;
 }
 
 
 .nav-icons{
-    display: flex;
-    align-items: center;
     gap: 25px;
+}
+
+
+.nav-dropdown{
+    gap: 20px;
+    left: 46.5%;
+    transform: translateX(-18.5%);
+    top: -500px;
+    background-color: white;
+    padding: 20px 30px;
+    z-index: 20;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.nav-icon{
+    width: 24px;
+    height: 24px;
+}
+
+.nav-dropdown.active{
+    top: 80px;
 }
 
 
@@ -98,20 +117,16 @@ header{
 .hero{
     background-image: url("../assets/hero-bg.png");
     background-repeat: no-repeat;
-    background-position: center center;
     background-size: contain;
-    /* min-height: 100vh; */
-    background-position: center 60px;
-    background-color: #FAFAFA;
-    position: relative;
+    background-position: center 30%;
+    background-color: var(--nook-secondary-color);
+    padding-top: 53px;
 }
 
 
-h1{
-    font-size: clamp(40px, 5vw, 64px);
-    font-weight: 500;
-    color: #303635;
-    text-align: center;
+.hero-h1{
+    font-size: clamp(52px, 5vw, 64px);
+    color: var(--nook-primary-text);
     line-height: 130%;
     max-width: 850px;
     margin: 0 auto 40px auto;
@@ -120,41 +135,40 @@ h1{
 
 .hero-content{
     margin-top: 52px;
-    position: relative;
 }
 
 
 .hero-images{
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: clamp(20px, 5vw, 81px);
 }
 
 
-.hero > p{
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    text-align: center;
+.hero-p{
     color: #5F6060;
     max-width: 430px;
     margin: 0 auto;
+    line-height: 120%;
 }
 
 
 .hero-img-1{
-    overflow: hidden;
-    width: max-content;
+    width: 100%;
+    max-width: 269px;
 }
 
+
 .floating-seal{
-    position: absolute;
     top: -6.5%;
-    left: 44%;
+    left: 32%;
+    width: clamp(100px, 14vw, 222.33px);
 }
 
 .hero-img-2{
     margin-top: 66px;
+    width: 100%;
+    max-width: 600px;
 }
 
 
@@ -166,9 +180,7 @@ h1{
 
 .hero-img-content > p{
     max-width: 218px;
-    font-size: 20px;
-    color: #303635;
-    font-weight: 400;
+    color: var(--nook-primary-text);
 }
 
 .hero-img-content > img{
@@ -181,27 +193,22 @@ h1{
 
 /* Marquee css */
 .ticker-container {
-    overflow: hidden;
     width: 100%;
     border-bottom: 1px solid #6D7373;
     padding: 24px 0px;
     background-color: white;
-    position: absolute;
     bottom: -80px;
 }
 
 .ticker-track {
     display: flex;
     width: max-content;
+    gap: 24px;
 }
 
 .brand {
-    padding: 0 40px;
     font-size: 22px;
-    font-weight: bold;
     color: #6D7373;
-    display: flex;
-    align-items: center;
     gap: 24px;
 }
 
@@ -211,36 +218,34 @@ h1{
 
 /* swiper css */
 .swiper{
-    margin-top: 200px;
-    overflow: hidden;
+    margin-top: 183px;
     margin-bottom: 100px;
 }
 
 
 .swiper-wrapper{
-    gap: 15px;
+    gap: 24px;
 }
 
 
 .swiper-slide{
-    position: relative;
+    width: 100%;
+    /* max-width: 307px; */
 }
 
 
 .swiper-slide > .overlay{
-    position: absolute;
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to bottom, transparent 80%, #3b4242da);
 }
 
 
-.swiper-slide > p{
-    position: absolute;
+.swiper-p{
     left: 16px;
     bottom: 16px;
     color: white;
-    font-size: 28px;
+    font-size: clamp(24px, 5.64vw, 28px);
     z-index: 10;
 }
 
@@ -251,7 +256,6 @@ h1{
 
 
 .custom-navigation-wrapper {
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -260,24 +264,21 @@ h1{
     height: 140px;
     background-color: #f4f4f4;
     border-radius: 50%;
-    gap: 8px;
+    gap: 14px;
 }
 
 
-.custom-navigation-wrapper .swiper-button-prev,
-.custom-navigation-wrapper .swiper-button-next {
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
     position: static;
-    width: 8px;
-    padding-top: 21px;
-    color: #303635;
+    padding-top: 5px;
+    color: var(--nook-secondary-color);
+    cursor: pointer;
 }
-
 
 .scroll-text {
-    font-size: 20px;
-    color: #303635;
+    color: var(--nook-primary-text);
     user-select: none;
-    font-family: "Inter", sans-serif;
 }
 
 
@@ -291,10 +292,9 @@ h1{
 
 
 .popular-category {
-    margin: 50px 0px 48px 0px;
+    margin: 48px 0px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    flex-wrap: nowrap;
 }
 
 .popular-category::-webkit-scrollbar {
@@ -302,70 +302,69 @@ h1{
 }
 
 
-.popular-category>ul {
+.category-ul {
     max-width: fit-content;
     margin: 0 auto;
     list-style: none;
     color: #414141;
-    font-size: 18px;
 }
 
 
-.popular-category>ul>li {
+.tab-item {
     cursor: pointer;
-    padding: 20px 22px;
+    padding: 0px 22px 22px 22px;
     border-bottom: 2px solid #CFCFCF;
+    line-height: 32px;
 }
 
 
-.popular-category>ul>li:hover {
-    color: #00494A;
-    border-bottom: 2px solid #00494A;
+.tab-item:hover {
+    color: var(--nook-secondary-text);
+    border-bottom: 2px solid var(--nook-secondary-text);
 }
 
 
 .collection-grid{
     display: grid;
-    grid-template-columns: repeat(4, minmax(250px, 1fr));
-    gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 48px;
+    column-gap: 24px;
+    place-items: center;
 }
 
 
 .collection-grid-item{
-    margin-bottom: 48px;
-    /* width: 100%;
-    max-width: 307px; */
+    width: 100%;
 }
 
 
-.collection-grid-item > img{
-    /* width: 100%; */
+.collection-image{
     margin-bottom: 20px;
+    width: 100%;
 }
 
 
-.collection-grid-item > h4{
-    font-size: 20px;
-    font-weight: 700;
-    color: #303635;
+.collection-h4{
+    color: var(--nook-primary-text);
     margin-bottom: 14px;
 }
 
 
-.collection-grid-item > span{
-    font-size: 20px;
-    font-weight: 400;
+.product-price{
     color: #888888;
 }
 
 
+.collection-btn{
+    padding-top: 48px;
+}
 
-.collection-btn > a{
-    font-family: "Inter", sans-serif;
+
+
+.collection-btn-a{
     gap: 10px;
-    font-weight: 400;
-    font-size: 18px;
-    color: #00494A;
+    color: var(--nook-secondary-text);
+    line-height: 32px;
 }
 
 
@@ -386,33 +385,28 @@ h1{
 
 
 
-.futura-col-1 > h2{
+.futura-h2{
     color: white;
-    font-weight: 700;
     font-size: 56px;
     margin-bottom: 32px;
     max-width: 545px;
+    line-height: 140%;
 }
 
 
-.futura-col-1 > p {
-    font-size: 20px;
+.futura-p {
     color: #F7F8F7;
-    font-family: "Inter", sans-serif;
     max-width: 544px;
     margin-bottom: 24px;
+    line-height: 32px;
 }
 
 
 
-.futura-col-1 > a{
+.read-more{
     color: white;
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
     gap: 8px;
+    line-height: 32px;
 }
 
 
@@ -422,55 +416,46 @@ h1{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px -55px;
-    max-width: 100%;
+    width: 638px;
     padding: 48px 56px;
     gap: 117px;
     margin-top: 81px;
-    color: #00494A;
+    color: var(--nook-secondary-text);
 }
 
 
-.futura-stat > p{
-    font-family: "Inter", sans-serif;
-    font-size: 24px;
-    font-weight: 400;
+.futura-stat-p{
     margin-bottom: 24px;
+    line-height: 40px;
 }
 
 
-.futura-stat > span{
+.futura-stat-span{
     font-size: 40px;
-    font-weight: 400;
     text-wrap: nowrap;
+    line-height: 56px;
 }
 
 
-.futura-col-2{
-    position: relative;
-}
-
-
-.futura-col-2 .futura-seal {
-    position: absolute;
-    max-width: clamp(100px,12vw,158.41px);
-    right: 50px;
+.futura-seal {
+    max-width: 158.41px;
+    right: 35px;
     top: -90px;
     z-index: 20;
 }
 
 
 .rectangle{
-    position: absolute;
     background-color: var(--nook-primary-color);
     width: 40%;
     height: 14%;
-    right: 0px;
+    right: -1px;
+    top: -2px;
 }
 
 
 
 .vertical-line {
-    position: absolute;
     background-color: var(--nook-primary-color);
     width: 20px;
     height: 100%;
@@ -479,19 +464,20 @@ h1{
 
 
 
-.futura-col-2 > img{
+.futura-main-img{
     width: 100%;
+    max-width: 609px;
 }
 
 
 
 .why-container{
-    background-color: #FAFAFA;
+    background-color: var(--nook-secondary-color);
     padding: 120px 0px
 }
 
 
-.why-container > .container > h2{
+.why-us-h2{
     margin-bottom: 88px;
 }
 
@@ -502,23 +488,20 @@ h1{
 
 
 /* Why us section */
-.why-us-card > img {
+.why-us-img {
     margin-bottom: 40px;
 }
 
 
-.why-us-card > h3 {
+.why-us-h3 {
     margin-bottom: 14px;
-    font-weight: 400;
-    font-size: 24px;
-    color: #303635;
+    color: var(--nook-primary-text);
 }
 
 
-.why-us-card > p {
-    font-weight: 400;
-    font-size: 18px;
+.why-us-p {
     color: #495050;
+    line-height: 28px;
 }
 
 
@@ -526,10 +509,11 @@ h1{
 
 /* contact us section */
 .contact-container {
-    background-color: #00494A;
+    background-color: var(--nook-secondary-text);
     margin: 109px 0px 104px 0px;
     padding: 70px 102px;
     width: 100%;
+    display: flex;
 }
 
 
@@ -537,25 +521,22 @@ h1{
     width: 100%;
 }
 
+.form-container {
+    width: 100%;
+}
+
 .contact-form {
     width: 100%;
 }
 
-.contact-form>form {
-    width: 100%;
-}
 
-
-.contact-form > form > input {
+.input-email {
     padding: 16px 32px;
     background-color: #005F61;
     border: none;
     outline: none;
-    color: white;
     width: 100%;
     margin-bottom: 32px;
-    font-size: 18px;
-    font-weight: 400;
     color: #C3C5C6;
     font-family: "Inter", sans-serif;
 
@@ -563,24 +544,21 @@ h1{
         font-size: 18px;
         font-weight: 400;
         color: #C3C5C6;
+        font-family: "Inter", sans-serif;
     }
 }
 
 
-.contact-form > form > div {
-    position: relative;
+.textarea-div {
     margin-bottom: 40px;
 
-    textarea {
+    .contact-textarea {
         background-color: #005F61;
         padding: 16px 32px;
         border: none;
         outline: none;
-        color: white;
         width: 100%;
         height: 185px;
-        font-size: 18px;
-        font-weight: 400;
         color: #C3C5C6;
         font-family: "Inter", sans-serif;
 
@@ -588,81 +566,62 @@ h1{
             font-size: 18px;
             font-weight: 400;
             color: #C3C5C6;
+            font-family: "Inter", sans-serif;
         }
     }
 
-    span {
-        position: absolute;
+    .textarea-char-display {
         bottom: 32px;
         right: 16px;
         color: #989898;
-        font-size: 20px;
-        font-weight: 400;
-        font-family: "Inter", sans-serif;
         user-select: none;
     }
 }
 
 
-.contact-form>form>button {
-    width: 170px;
-    height: 62px;
-    border: 1px solid #F4F5F5;
-    background-color: transparent;
-    color: #F4F5F5;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 20px;
-    font-family: "Inter", sans-serif;
+
+.contact-content2{
+    gap: 16px;
 }
 
 
-.contact-container > div h2{
-    font-weight: 400;
-    font-size: 72px;
+.contact-content .contact-h2{
+    font-size: clamp(32px, 5vw, 72px);
     color: #F4F5F5;
+    line-height: clamp(40px, 5vw, 88px);
 }
 
 
 .contact-p{
-    font-size: 18px;
-    font-weight: 400;
     color: #D8D8D8;
     max-width: 472px;
     line-height: 32px;
 }
 
 
-.lets-work1{
-    position: relative;
+.lets-work-icon{
+    width: clamp(46px, 5vw, 73px);
 }
 
 
-.lets-work-icon1{
-    position: relative;
-    width: 30px;
-    right: -2%;
-    bottom: -23px;
+.together-icon{
+    width: clamp(36px, 5vw, 57px);
 }
 
-
-.lets-work-icon2{
-    position: relative;
-    top: -10%;
-}
 
 
 .lets-work2{
-    gap: 40px;
+    gap: clamp(30px, 5vw, 44px);
     margin-bottom: 24px;
+    padding-left: 15px;
 }
 
 
 
 
-footer{
-    background-color: #FAFAFA;
-    padding: 65px 0px;
+.footer{
+    background-color: var(--nook-secondary-color);
+    padding: 65px 0px 39px 0px;
 }
 
 
@@ -674,11 +633,9 @@ footer{
 
 
 .footer-p{
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
     color: #5A5E5E;
     margin-bottom: 52px;
+    line-height: 28px;
 }
 
 
@@ -690,22 +647,20 @@ footer{
 
 .footer-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 45px;
+    grid-template-columns: 363.24px 1fr 1fr 318px;
+    gap: clamp(28px, 5vw, 73.85px);
 }
 
 
-.footer-container > ul{
+.footer-ul{
     display: flex;
     flex-direction: column;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
     line-height: 28px;
+    max-width: 95.8px;
 }
 
 
-.footer-container > ul > li > a{
+.footer-ul-li-a{
     text-decoration: none;
     color: #495050;
 }
@@ -721,42 +676,26 @@ footer{
 
 
 
-.footer-container h3{
-    font-weight: 500;
+.footer-h3{
     font-size: 32px;
     color: #283E2E;
     margin-bottom: 34px;
-}
-
-
-.footer-container button{
-    background-color: #00494A;
-    color: #F7F7F7;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 20px;
-    padding: 15px 60px;
-    font-family: "Inter", sans-serif;
+    line-height: 46px;
 }
 
 
 .copyright-container{
-    padding: 16px 0px;
+    padding-top: 16px;
     margin-top: 50px;
     border-top: 1px solid #9C9E9E;
-    text-align: center;
     flex-wrap: wrap-reverse;
     gap: 20px;
 }
 
 
-.copyright-container > p{
-    font-weight: 400;
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
+.copyright-p{
     color: #5A5E5E;
+    line-height: 32px;
 }
 
 .copyright-container > div{
@@ -766,6 +705,5 @@ footer{
 
 .copyright-container > div > a{
     text-decoration: none;
-    font-family: "Inter", sans-serif;
     color: #495050;
 }

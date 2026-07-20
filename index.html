@@ -11,56 +11,67 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 </head>
 <body>
-    <header>
-        <div class="container navbar">
-        <a href="/" class="logo">
-            <img src="./assets/logo.png" alt="logo">
-        </a>
-        <div class="menu-bar">
-            <div class="line line1"></div>
-            <div class="line line2"></div>
-            <div class="line line1"></div>
+    <header class="header">
+        <div class="container navbar nook-flex-between nook-relative">
+            <a href="/" class="logo">
+                <img src="./assets/logo.png" alt="logo">
+            </a>
+            <div class="menu-bar nook-flex-center nook-flex-col">
+                <img src="./assets/icons/line-top.svg" alt="svg line">
+                <img src="./assets/icons/line-middle.svg" alt="svg line">
+                <img src="./assets/icons/line-top.svg" alt="svg line">
+            </div>
+            <div class="nav-icons nook-flex">
+                <a class="nook-flex" href="#"><img class="nav-icon" src="./assets/icons/user.svg" alt="User icon"></a>
+                <a class="nook-flex" href="#"><img class="nav-icon" src="./assets/icons/heart.svg" alt="Heart icon"></a>
+                <a class="nook-flex" href="#"><img class="nav-icon" src="./assets/icons/cart.svg" alt="Shopping cart"></a>
+            </div>
         </div>
-        <div class="nav-icons">
-            <a href="#"><img src="./assets/icons/user.png" alt="User icon"></a>
-            <a href="#"><img src="./assets/icons/heart.png" alt="Heart icon"></a>
-            <a href="#"><img src="./assets/icons/cart.png" alt="Shopping cart"></a>
-        </div>
-    </div>
+        <ul class="nook-list nook-flex-between nook-flex-col nook-font-400 nook-font-20px nook-absolute nav-dropdown">
+            <li class="footer-ul-li"><a class="footer-ul-li-a" href="#">About Us</a></li>
+            <li class="footer-ul-li"><a class="footer-ul-li-a" href="#">Reviews</a></li>
+            <li class="footer-ul-li"><a class="footer-ul-li-a" href="#">Financing</a></li>
+            <li class="footer-ul-li"><a class="footer-ul-li-a" href="#">Blog</a></li>
+            <li class="footer-ul-li"><a class="footer-ul-li-a" href="#contact">Contact Us</a></li>
+        </ul>
     </header>
 
     <main>
         <!-- Hero -->
-        <section class="hero">
-            <h1>Make your environment minimalistic and futuristic</h1>
-            <p>Transform your closets into functional works of art with closet creations’ custom design solutions.</p>
-            <div class="hero-content">
+        <section class="hero nook-relative">
+            <div class="container">
+                <h1 class="nook-font-500 nook-text-center hero-h1">Make your environment minimalistic and futuristic</h1>
+                <p class="nook-font-400 nook-font-inter nook-text-center nook-font-18px hero-p">Transform your closets into functional works of art with closet creations’ custom design solutions.</p>
+            </div>
+            <div class="hero-content nook-relative">
                 <div class="hero-images container">
-                    <div class="hero-img-1">
-                        <img src="./assets/hero-img1.png" alt="Furniture image">
+                    <div class="nook-overflow-hidden">
+                        <img class="hero-img-1" src="./assets/hero-img1.png" alt="Furniture image">
                         <div class="hero-img-content">
-                            <p>Vintage Desk Accessories 2024</p>
+                            <p class="nook-font-400 nook-font-20px">Vintage Desk Accessories 2024</p>
                             <img src="./assets/icons/play.png" alt="music play icon">
                         </div>
                     </div>
-                    <img class="floating-seal" src="./assets/hero-seal.png" alt="seal">
-                    <img class="hero-img-2" src="./assets/hero-img2.png" alt="Furniture image">
-                    <div class="hero-img-1">
-                        <img src="./assets/hero-img1.png" alt="Furniture image">
+                    <div class="nook-flex-center nook-relative floating-seal-container">
+                        <img class="floating-seal nook-absolute" src="./assets/hero-seal.png" alt="seal">
+                        <img class="hero-img-2" src="./assets/hero-img2.png" alt="Furniture image">
+                    </div>
+                    <div class="nook-overflow-hidden hero-image1-container">
+                        <img class="nook-flip hero-img-1" src="./assets/hero-img1.png" alt="Furniture image">
                         <div class="hero-img-content">
-                            <p>Vintage Desk Accessories 2024</p>
+                            <p class="nook-font-400 nook-font-24px">Minimal Tulip Chair 2o24</p>
                             <img src="./assets/icons/play.png" alt="music play icon">
                         </div>
                     </div>
                 </div>
-                <div class="ticker-container">
+                <div class="ticker-container nook-absolute nook-overflow-hidden">
                     <div class="ticker-track" id="tickerTrack">
-                        <div class="brand"><img src="./assets/icons/dark-star.png" alt="star icon">Woak Table</div>
-                        <div class="brand"><img src="./assets/icons/dark-star.png" alt="star icon">Organic Fabric</div>
-                        <div class="brand"><img src="./assets/icons/dark-star.png" alt="star icon">Vintage Metal</div>
-                        <div class="brand"><img src="./assets/icons/dark-star.png" alt="star icon">Modern Chair</div>
-                        <div class="brand"><img src="./assets/icons/dark-star.png" alt="star icon">Mapple Shelf</div>
-                        <div class="brand"><img src="./assets/icons/dark-star.png" alt="star icon">Mapple Shelf</div>
+                        <div class="brand nook-flex"><img src="./assets/icons/dark-star.png" alt="star icon"><span class="nook-font-500 nook-font-22px">Woak Table</span></div>
+                        <div class="brand nook-flex"><img src="./assets/icons/dark-star.png" alt="star icon"><span class="nook-font-500 nook-font-22px">Organic Fabric</span></div>
+                        <div class="brand nook-flex"><img src="./assets/icons/dark-star.png" alt="star icon"><span class="nook-font-500 nook-font-22px">Vintage Metal</span></div>
+                        <div class="brand nook-flex"><img src="./assets/icons/dark-star.png" alt="star icon"><span class="nook-font-500 nook-font-22px">Modern Chair</span></div>
+                        <div class="brand nook-flex"><img src="./assets/icons/dark-star.png" alt="star icon"><span class="nook-font-500 nook-font-22px">Mapple Shelf</span></div>
+                        <div class="brand nook-flex"><img src="./assets/icons/dark-star.png" alt="star icon"><span class="nook-font-500 nook-font-22px">Mapple Shelf</span></div>
                     </div>
                 </div>
             </div>
@@ -73,43 +84,43 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide">
-                        <p>Sofa</p>
-                        <div class="overlay"></div>
+                    <div class="swiper-slide nook-relative">
+                        <p class="nook-absolute nook-font-400 swiper-p">Sofa</p>
+                        <div class="overlay nook-absolute"></div>
                         <img src="./assets/slider1.png" alt="slide furniture image">
                     </div>
-                    <div class="swiper-slide">
-                        <p>Chairs</p>
-                        <div class="overlay"></div>
+                    <div class="swiper-slide nook-relative">
+                        <p class="nook-absolute nook-font-400 swiper-p">Chairs</p>
+                        <div class="overlay nook-absolute"></div>
                         <img src="./assets/slider2.png" alt="slide furniture image">
                     </div>
-                    <div class="swiper-slide">
-                        <p>Accessories</p>
-                        <div class="overlay"></div>
+                    <div class="swiper-slide nook-relative">
+                        <p class="nook-absolute nook-font-400 swiper-p">Accessories</p>
+                        <div class="overlay nook-absolute"></div>
                         <img src="./assets/slider3.png" alt="slide furniture image">
                     </div>
-                    <div class="swiper-slide">
-                        <p>Table</p>
-                        <div class="overlay"></div>
+                    <div class="swiper-slide nook-relative">
+                        <p class="nook-absolute nook-font-400 swiper-p">Table</p>
+                        <div class="overlay nook-absolute"></div>
                         <img src="./assets/slider1.png" alt="slide furniture image">
                     </div>
-                    <div class="swiper-slide">
-                        <p>Accessories</p>
-                        <div class="overlay"></div>
+                    <div class="swiper-slide nook-relative">
+                        <p class="nook-absolute nook-font-400 swiper-p">Accessories</p>
+                        <div class="overlay nook-absolute"></div>
                         <img src="./assets/slider3.png" alt="slide furniture image">
                     </div>
-                    <div class="swiper-slide">
-                        <p>Chairs</p>
-                        <div class="overlay"></div>
+                    <div class="swiper-slide nook-relative">
+                        <p class="nook-absolute nook-font-400 swiper-p">Chairs</p>
+                        <div class="overlay nook-absolute"></div>
                         <img src="./assets/slider2.png" alt="slide furniture image">
                     </div>
                 </div>
             
                 <!-- If we need navigation buttons -->
-                <div class="custom-navigation-wrapper no-flex-center">
-                    <div class="swiper-button-prev"></div>
-                    <span class="scroll-text">Scroll</span>
-                    <div class="swiper-button-next"></div>
+                <div class="custom-navigation-wrapper nook-flex-center nook-absolute">
+                    <div class="swiper-button-prev-custom"><img src="./assets/icons/arrow-left.svg" alt="svg"></div>
+                    <span class="scroll-text nook-font-20px nook-font-inter">Scroll</span>
+                    <div class="swiper-button-next-custom"><img src="./assets/icons/arrow-right.svg" alt="svg"></div>
                 </div>
             </div>
         </section>
@@ -117,9 +128,9 @@
 
         <!-- popular collection section -->
          <section class="collection container">
-            <h2 class="no-section-title no-text-center">Popular Collection</h2>
+            <h2 class="nook-section-title nook-text-center">Popular Collection</h2>
             <nav class="popular-category">
-                <ul class="no-flex-between">
+                <ul class="nook-flex-between nook-font-18px category-ul">
                     <li class="tab-item active" data-filter="all">All</li>
                     <li class="tab-item" data-filter="sofa">Sofa</li>
                     <li class="tab-item" data-filter="table">Table</li>
@@ -130,48 +141,48 @@
 
             <div class="collection-grid">
                 <div class="collection-grid-item" data-category="sofa">
-                    <img src="./assets/collection-1.png" alt="furniture image">
-                    <h4>Vintage Single Sofa 2024</h4>
-                    <span>Tk 18,500</span>
+                    <img class="collection-image" src="./assets/collection-1.png" alt="furniture image">
+                    <h4 class="nook-font-700 nook-font-20px collection-h4">Vintage Single Sofa 2024</h4>
+                    <span class="nook-font-400 nook-font-20px product-price">Tk 18,500</span>
                 </div>
                 <div class="collection-grid-item" data-category="table">
-                    <img src="./assets/collection-2.png" alt="furniture image">
-                    <h4>Vintage Single Sofa 2024</h4>
-                    <span>Tk 18,500</span>
+                    <img class="collection-image" src="./assets/collection-2.png" alt="furniture image">
+                    <h4 class="nook-font-700 nook-font-20px collection-h4">Vintage Single Sofa 2024</h4>
+                    <span class="nook-font-400 nook-font-20px product-price">Tk 18,500</span>
                 </div>
                 <div class="collection-grid-item" data-category="chair">
-                    <img src="./assets/collection-3.png" alt="furniture image">
-                    <h4>Vintage Single Sofa 2024</h4>
-                    <span>Tk 18,500</span>
+                    <img class="collection-image" src="./assets/collection-3.png" alt="furniture image">
+                    <h4 class="nook-font-700 nook-font-20px collection-h4">Vintage Single Sofa 2024</h4>
+                    <span class="nook-font-400 nook-font-20px product-price">Tk 18,500</span>
                 </div>
                 <div class="collection-grid-item" data-category="table">
-                    <img src="./assets/collection-1.png" alt="furniture image">
-                    <h4>Vintage Single Sofa 2024</h4>
-                    <span>Tk 18,500</span>
+                    <img class="collection-image" src="./assets/collection-1.png" alt="furniture image">
+                    <h4 class="nook-font-700 nook-font-20px collection-h4">Vintage Single Sofa 2024</h4>
+                    <span class="nook-font-400 nook-font-20px product-price">Tk 18,500</span>
                 </div>
                 <div class="collection-grid-item" data-category="chair">
-                    <img src="./assets/collection-2.png" alt="furniture image">
-                    <h4>Vintage Single Sofa 2024</h4>
-                    <span>Tk 18,500</span>
+                    <img class="collection-image" src="./assets/collection-2.png" alt="furniture image">
+                    <h4 class="nook-font-700 nook-font-20px collection-h4">Vintage Single Sofa 2024</h4>
+                    <span class="nook-font-400 nook-font-20px product-price">Tk 18,500</span>
                 </div>
                 <div class="collection-grid-item" data-category="sofa">
-                    <img src="./assets/collection-3.png" alt="furniture image">
-                    <h4>Vintage Single Sofa 2024</h4>
-                    <span>Tk 18,500</span>
+                    <img class="collection-image" src="./assets/collection-3.png" alt="furniture image">
+                    <h4 class="nook-font-700 nook-font-20px collection-h4">Vintage Single Sofa 2024</h4>
+                    <span class="nook-font-400 nook-font-20px product-price">Tk 18,500</span>
                 </div>
                 <div class="collection-grid-item" data-category="table">
-                    <img src="./assets/collection-3.png" alt="furniture image">
-                    <h4>Vintage Single Sofa 2024</h4>
-                    <span>Tk 18,500</span>
+                    <img class="collection-image" src="./assets/collection-3.png" alt="furniture image">
+                    <h4 class="nook-font-700 nook-font-20px collection-h4">Vintage Single Sofa 2024</h4>
+                    <span class="nook-font-400 nook-font-20px product-price">Tk 18,500</span>
                 </div>
                 <div class="collection-grid-item" data-category="accessories">
-                    <img src="./assets/collection-1.png" alt="furniture image">
-                    <h4>Vintage Single Sofa 2024</h4>
-                    <span>Tk 18,500</span>
+                    <img class="collection-image" src="./assets/collection-1.png" alt="furniture image">
+                    <h4 class="nook-font-700 nook-font-20px collection-h4">Vintage Single Sofa 2024</h4>
+                    <span class="nook-font-400 nook-font-20px product-price">Tk 18,500</span>
                 </div>
             </div>
-            <div class="no-flex-center collection-btn">
-                <a href="#" class="no-flex-between">See all Collection <img src="./assets/icons/arrow-right.png" alt="arrow right icon"></a>
+            <div class="nook-flex-center collection-btn">
+                <a href="#" class="nook-flex-between nook-font-18px nook-font-400 nook-font-inter collection-btn-a">See all Collection <img src="./assets/icons/arrow-right.png" alt="arrow right icon"></a>
             </div>
          </section>
 
@@ -179,32 +190,32 @@
 
         <!-- Futura designed for Better living section -->
          <section class="futura-container">
-            <div class="container no-flex-between futura-container2">
-                <div class="futura-col-1">
-                    <h2>Futura designed for Better living</h2>
-                    <p>Introducing collections of high-quality furniture that bear
+            <div class="container nook-flex-between futura-container2">
+                <div class="futura-col-left">
+                    <h2 class="nook-font-700 futura-h2">Futura designed for Better living</h2>
+                    <p class="nook-font-20px nook-font-inter futura-p nook-font-400">Introducing collections of high-quality furniture that bear
                         all the hallmarkes of British engineering.</p>
-                    <a href="#">Read more <img src="./assets/icons/arrow-up-right.png" alt="arrow icon"></a>
-                    <div class="futura-stats no-flex-center">
+                    <a class="nook-font-inter nook-font-18px nook-flex nook-font-500 read-more" href="#">Read more <img src="./assets/icons/arrow-up-right.png" alt="arrow icon"></a>
+                    <div class="futura-stats nook-flex-center">
                         <div class="futura-stat">
-                            <p>Furniture</p>
-                            <span class="stat-value" data-stat-value="50">50 +</span>
+                            <p class="nook-font-400 nook-font-inter nook-font-24px futura-stat-p">Furniture</p>
+                            <span class="stat-value nook-font-400 futura-stat-span" data-stat-value="50">50 +</span>
                         </div>
                         <div class="futura-stat">
-                            <p>Decor</p>
-                            <span class="stat-value" data-stat-value="20">20 +</span>
+                            <p class="nook-font-400 nook-font-inter nook-font-24px futura-stat-p">Decor</p>
+                            <span class="stat-value nook-font-400 futura-stat-span" data-stat-value="20">20 +</span>
                         </div>
                         <div class="futura-stat">
-                            <p>Finishes</p>
-                            <span class="stat-value" data-stat-value="800">800 +</span>
+                            <p class="nook-font-400 nook-font-inter nook-font-24px futura-stat-p">Finishes</p>
+                            <span class="stat-value nook-font-400 futura-stat-span" data-stat-value="800">800 +</span>
                         </div>
                     </div>
                 </div>
-                <div class="futura-col-2">
-                    <img class="futura-seal" src="./assets/futura-seal.png" alt="image">
-                    <div class="rectangle"></div>
-                    <div class="vertical-line"></div>
-                    <img src="./assets/futura.png" alt="image">
+                <div class="futura-col-right nook-relative">
+                    <img class="futura-seal nook-absolute" src="./assets/futura-seal.png" alt="image">
+                    <div class="rectangle nook-absolute"></div>
+                    <div class="vertical-line nook-absolute"></div>
+                    <img class="futura-main-img" src="./assets/futura.png" alt="image">
                 </div>
             </div>
          </section>
@@ -214,23 +225,23 @@
          <!-- why us section -->
           <section class="why-container">
             <div class="container">
-                <h2 class="no-section-title">Why us?</h2>
+                <h2 class="nook-section-title why-us-h2">Why us?</h2>
 
-                <div class="no-flex-between why-us-card-group">
-                    <div class="why-us-card no-flex-center no-flex-col no-text-center">
-                        <img src="./assets/icons/phone.png" alt="icon">
-                        <h3>24/7 Support</h3>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                <div class="nook-flex-between why-us-card-group">
+                    <div class="why-us-card nook-flex-center nook-flex-col nook-text-center">
+                        <img class="why-us-img" src="./assets/icons/phone.png" alt="icon">
+                        <h3 class="nook-font-400 nook-font-24px why-us-h3">24/7 Support</h3>
+                        <p class="nook-font-400 nook-font-18px nook-font-inter why-us-p">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
                     </div>
-                    <div class="why-us-card no-flex-center no-flex-col no-text-center">
-                        <img src="./assets/icons/shipping.png" alt="icon">
-                        <h3>Free Shipping</h3>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                    <div class="why-us-card nook-flex-center nook-flex-col nook-text-center">
+                        <img class="why-us-img" src="./assets/icons/shipping.png" alt="icon">
+                        <h3 class="nook-font-400 nook-font-24px why-us-h3">Free Shipping</h3>
+                        <p class="nook-font-400 nook-font-18px nook-font-inter why-us-p">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
                     </div>
-                    <div class="why-us-card no-flex-center no-flex-col no-text-center">
-                        <img src="./assets/icons/phone.png" alt="icon">
-                        <h3>24/7 Support</h3>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                    <div class="why-us-card nook-flex-center nook-flex-col nook-text-center">
+                        <img class="why-us-img" src="./assets/icons/phone.png" alt="icon">
+                        <h3 class="nook-font-400 nook-font-24px why-us-h3">24/7 Support</h3>
+                        <p class="nook-font-400 nook-font-18px nook-font-inter why-us-p">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
                     </div>
                 </div>
             </div>
@@ -239,65 +250,65 @@
 
 
           <!-- contact us section -->
-           <section class="container">
-            <div class="no-flex contact-container">
+           <section class="container" id="contact">
+            <div class="contact-container">
                 <div class="contact-content">
-                    <div class="no-flex lets-work1">
-                        <h2>Let’s work</h2> <img class="lets-work-icon1" src="./assets/icons/light-star.png" alt="icon"> <img class="lets-work-icon2" src="./assets/icons/light-star.png" alt="icon">
+                    <div class="nook-flex contact-content2">
+                        <h2 class="nook-font-400 contact-h2">Let’s work</h2> <img class="lets-work-icon" src="./assets/icons/star-group.png" alt="icon">
                     </div>
-                    <div class="no-flex lets-work2"><img src="./assets/icons/light-star.png" alt="icon">
-                        <h2>Together</h2>
+                    <div class="nook-flex lets-work2"><img class="together-icon" src="./assets/icons/light-star.png" alt="icon">
+                        <h2 class="nook-font-400 contact-h2">Together</h2>
                     </div>
-                    <p class="contact-p">Do l have consant to record this meeting gain traction,
+                    <p class="contact-p nook-font-400 nook-font-18px nook-font-inter">Do l have consant to record this meeting gain traction,
                         review, nor game-plan.</p>
                 </div>
-                <div class="contact-form">
-                    <form action="">
-                        <input type="email" name="email" placeholder="Enter Your Email">
-                        <div>
-                            <textarea class="text-area" name="message" placeholder="Type Your Message"></textarea>
-                            <span class="text-count-display">0/200</span>
+                <div class="form-container">
+                    <form class="contact-form" action="">
+                        <input class="nook-font-400 nook-font-18px nook-font-inter input-email" type="email" name="email" placeholder="Enter Your Email">
+                        <div class="nook-relative textarea-div">
+                            <textarea class="text-area nook-font-18px nook-font-400 nook-font-inter contact-textarea" name="message" maxlength="200" placeholder="Type Your Message"></textarea>
+                            <span class="textarea-char-display nook-absolute nook-font-20px nook-font-inter">0/200</span>
                         </div>
-                        <button>Send</button>
+                        <button class="nook-font-20px nook-font-600 nook-font-inter nook-btn-outline">Send</button>
                     </form>
                 </div>
             </div>
            </section>
 
 
-           <footer>
+           <footer class="footer">
             <div class="container">
                 <div class="footer-container">
-                    <div>
+                    <div class="footer-col-1">
                         <img class="footer-logo" src="./assets/footer-logo.png" alt="logo image">
-                        <p class="footer-p">Custom furniture for minimalist life. We make beautiful design and sustainable furniture in country</p>
-                        <div class="no-flex footer-social-icon">
+                        <p class="footer-p nook-font-400 nook-font-inter nook-font-18px">Custom furniture for minimalist life. We make beautiful design and sustainable furniture in country</p>
+                        <div class="nook-flex footer-social-icon">
                             <a href="www.facebook.com" target="_blank"><img src="./assets/icons/facebook.png" alt="facebook icon"></a>
                             <a href="www.instagram.com" target="_blank"><img src="./assets/icons/instagram.png" alt="instagram icon"></a>
                             <a href="www.twitter.com" target="_blank"><img src="./assets/icons/twitter.png" alt="twitter icon"></a>
                         </div>
                     </div>
-                    <ul class="no-list footer-ul-1">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Reviews</a></li>
-                        <li><a href="#">Financing</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                    <ul class="nook-list footer-ul-1 nook-font-400 nook-font-inter nook-font-18px footer-ul">
+                        <li class="footer-ul-li"><a class="footer-ul-li-a" href="#">About Us</a></li>
+                        <li class="footer-ul-li"><a class="footer-ul-li-a" href="#">Reviews</a></li>
+                        <li class="footer-ul-li"><a class="footer-ul-li-a" href="#">Financing</a></li>
+                        <li class="footer-ul-li"><a class="footer-ul-li-a" href="#">Blog</a></li>
+                        <li class="footer-ul-li"><a class="footer-ul-li-a" href="#">Contact Us</a></li>
                     </ul>
-                    <ul class="no-list footer-ul-2">
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Careeres</a></li>
-                        <li><a href="#">Return</a></li>
-                        <li><a href="#">Shipping</a></li>
+                    <ul class="nook-list footer-ul-2 nook-font-400 nook-font-inter nook-font-18px footer-ul">
+                        <li class="footer-ul-li"><a class="footer-ul-li-a" href="#">FAQ</a></li>
+                        <li class="footer-ul-li"><a class="footer-ul-li-a" href="#">Careeres</a></li>
+                        <li class="footer-ul-li"><a class="footer-ul-li-a" href="#">Return</a></li>
+                        <li class="footer-ul-li"><a class="footer-ul-li-a" href="#">Shipping</a></li>
                     </ul>
-                    <div>
-                        <h3>Free consultation for your furniture?</h3>
-                        <button>Contact Us</button>
+                    <div class="footer-col-2">
+                        <h3 class="nook-font-500 footer-h3">Free consultation for your furniture?</h3>
+                        <button class="nook-font-600 nook-font-20px nook-font-inter nook-btn-fill">Contact Us</button>
                     </div>
                 </div>
-                <div class="copyright-container no-flex-between">
-                    <p>Woodly2022 @ All Rights Reserved</p>
-                    <div class="no-flex">
+                <div class="copyright-container nook-flex-between nook-text-center">
+                    <p class="nook-font-400 nook-font-16px nook-font-inter copyright-p">Woodly2022 @ All Rights Reserved</p>
+                    <div class="nook-flex nook-font-inter">
                         <a href="#">Cookies Policy</a>
                         <a href="#">Privacy Policy</a>
                     </div>
