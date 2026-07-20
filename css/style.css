@@ -85,7 +85,6 @@ header{
     background-position: 0% 30%;
     background-color: var(--nook-secondary-color);
     padding-top: 53px;
-    margin-bottom: 183px;
 }
 
 
@@ -183,7 +182,7 @@ header{
 
 /* swiper css */
 .swiper{
-    margin-top: 200px;
+    margin-top: 183px;
     margin-bottom: 100px;
 }
 
