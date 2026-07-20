@@ -3,27 +3,48 @@ import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs
 
 
 document.addEventListener("DOMContentLoaded", function(){
-  const track = document.getElementById("tickerTrack");
+  // navbar dropdown functionality
+  function handleMenuDropdown(){
+    const menuBar = document.querySelector(".menu-bar");
+    const navDropdown = document.querySelector(".nav-dropdown");
 
-  const clone = track.innerHTML;
-  track.innerHTML = clone + clone + clone + clone;
+    menuBar.addEventListener("click", ()=>{
+      if(navDropdown.classList.contains("active")){
+        navDropdown.classList.remove("active");
+      }else{
+        navDropdown.classList.add("active");
+      }
+    })
+  }
+  handleMenuDropdown();
+  
+  
+  
+  // marquee functionality
+  function handleMarquee(){
+    const track = document.getElementById("tickerTrack");
 
-  let speed = 1;
-  let position = 0;
+    const clone = track.innerHTML;
+    track.innerHTML = clone + clone + clone + clone;
 
-  function scrollTicker() {
-    position -= speed;
+    let speed = 1;
+    let position = 0;
 
-    if (Math.abs(position) >= track.scrollWidth / 2) {
-      position = 0;
+    function scrollTicker() {
+      position -= speed;
+
+      if (Math.abs(position) >= track.scrollWidth / 2) {
+        position = 0;
+      }
+
+      track.style.transform = `translateX(${position}px)`;
+
+      requestAnimationFrame(scrollTicker);
     }
 
-    track.style.transform = `translateX(${position}px)`;
-
-    requestAnimationFrame(scrollTicker);
-  }
-
-  scrollTicker();
+    scrollTicker();
+  };
+  handleMarquee();
 
 
 

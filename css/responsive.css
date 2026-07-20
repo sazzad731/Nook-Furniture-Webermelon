@@ -274,6 +274,15 @@
     }
 
 
+    .input-email{
+        padding: 16px;
+    }
+
+    .contact-textarea{
+        padding: 16px !important;
+    }
+
+
     .footer-logo{
         margin-bottom: 14.85px;
     }
