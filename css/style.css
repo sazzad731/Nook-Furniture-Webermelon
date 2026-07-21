@@ -431,9 +431,14 @@ body {
     width: 100%;
     max-width: 638px;
     padding: 48px 56px;
-    gap: 117px;
     margin-top: 81px;
     color: var(--nook-secondary-text);
+}
+
+.futura-stat{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 

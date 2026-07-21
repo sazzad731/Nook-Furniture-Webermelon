@@ -7,14 +7,17 @@ document.addEventListener("DOMContentLoaded", function(){
   function handleMenuDropdown(){
     const menuBar = document.querySelector(".menu-bar");
     const navDropdown = document.querySelector(".nav-dropdown");
-
-    menuBar.addEventListener("click", ()=>{
+    menuBar.addEventListener("click", (e)=>{
       if(navDropdown.classList.contains("active")){
         navDropdown.classList.remove("active");
       }else{
         navDropdown.classList.add("active");
       }
+      navDropdown.addEventListener("click", function () {
+        navDropdown.classList.remove("active");
+      })
     })
+
   }
   handleMenuDropdown();
   
