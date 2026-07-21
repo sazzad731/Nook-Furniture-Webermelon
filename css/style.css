@@ -380,9 +380,21 @@ body {
 
 
 .futura-container2{
+    display: flex;
+    align-items: stretch;
     gap: 54px;
 }
 
+
+.futura-col-left {
+    width: calc((100% - 54px) * (638 / 1247));
+    flex-shrink: 0;
+}
+
+.futura-col-right {
+    width: calc((100% - 54px) * (609 / 1247));
+    flex-shrink: 0;
+}
 
 
 .futura-h2{
@@ -410,13 +422,14 @@ body {
 }
 
 
-.futura-stats{
+.futura-stats {
     background-color: #F7F8F7;
     background-image: url("../assets/living-stats-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px -55px;
-    width: 638px;
+    width: 100%;
+    max-width: 638px;
     padding: 48px 56px;
     gap: 117px;
     margin-top: 81px;
@@ -434,6 +447,7 @@ body {
     font-size: 40px;
     text-wrap: nowrap;
     line-height: 56px;
+    font-variant-numeric: tabular-nums;
 }
 
 
@@ -464,10 +478,11 @@ body {
 
 
 
-.futura-main-img{
-    min-width: 100%;
-    height: auto;
-    max-width: 609px;
+.futura-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 
@@ -539,6 +554,7 @@ body {
     width: 100%;
     margin-bottom: 32px;
     color: #C3C5C6;
+    font-family: "Inter", sans-serif;
 
     &::placeholder {
         font-size: 18px;
@@ -560,6 +576,7 @@ body {
         width: 100%;
         height: 185px;
         color: #C3C5C6;
+        font-family: "Inter", sans-serif;
 
         &::placeholder {
             font-size: 18px;
