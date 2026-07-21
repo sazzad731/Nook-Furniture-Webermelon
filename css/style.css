@@ -465,7 +465,8 @@ body {
 
 
 .futura-main-img{
-    width: 100%;
+    min-width: 100%;
+    height: auto;
     max-width: 609px;
 }
 
